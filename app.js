@@ -5,6 +5,20 @@ const supabase = window.supabase.createClient(
     SUPABASE_URL,
     SUPABASE_KEY
 );
+async function testSupabase() {
+    const { data, error } = await supabase
+        .from("products")
+        .select("*");
+
+    if (error) {
+        console.error("SUPABASE ERROR:", error);
+        return;
+    }
+
+    console.log("SUPABASE PRODUCTS:", data);
+}
+
+testSupabase();
 (function(){
   const DEMO_BUYER={email:'buyer@delhioz.com',password:'pass123'};
   const DEMO_ADMIN={email:'admin@noorulameen.com',password:'admin123'};
