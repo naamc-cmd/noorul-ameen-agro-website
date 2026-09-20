@@ -1,3 +1,10 @@
+const SUPABASE_URL = "https://vjtzrbcinptcsgqxaqvc.supabase.co";
+const SUPABASE_KEY = "sb_publishable_E60Uf9ex6yiYmicUJfc7nw_z7rT6xuq";
+
+const supabase = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
 (function(){
   const DEMO_BUYER={email:'buyer@delhioz.com',password:'pass123'};
   const DEMO_ADMIN={email:'admin@noorulameen.com',password:'admin123'};
